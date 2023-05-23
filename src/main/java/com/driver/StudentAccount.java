@@ -15,4 +15,19 @@ public class StudentAccount extends BankAccount{
 
     }
 
+    public void setInstitutionName(String institutionName) {
+        this.institutionName = institutionName;
+    }
+
+    public static void setMinimumBalance(double minimumBalance) {
+        StudentAccount.minimumBalance = minimumBalance;
+    }
+
+    public String getInstitutionName() {
+        return institutionName;
+    }
+
+    public static double getMinimumBalance() {
+        return minimumBalance;
+    }
 }

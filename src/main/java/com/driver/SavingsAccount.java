@@ -20,6 +20,30 @@ public class SavingsAccount extends BankAccount{
 
     }
 
+    public double getRate() {
+        return rate;
+    }
+
+    public double getMaxWithdrawalLimit() {
+        return maxWithdrawalLimit;
+    }
+
+    public static double getMinimumBalance() {
+        return minimumBalance;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+
+    public void setMaxWithdrawalLimit(double maxWithdrawalLimit) {
+        this.maxWithdrawalLimit = maxWithdrawalLimit;
+    }
+
+    public static void setMinimumBalance(double minimumBalance) {
+        SavingsAccount.minimumBalance = minimumBalance;
+    }
+
     public double getSimpleInterest(int years){
         return (double)years*rate*super.getBalance();
 
