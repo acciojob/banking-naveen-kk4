@@ -20,7 +20,8 @@ public class SavingsAccount extends BankAccount{
     }
     public void withdraw(double amount) throws Exception {
         if(amount>maxWithdrawalLimit)throw new Exception("Maximum Withdraw Limit Exceed");
-        super.withdraw(amount);
+        if(super.getBalance()-amount < minimumBalance) throw new Exception("Insufficient Balance");
+        super.setBalance(super.getBalance()-amount);
 
 
     }

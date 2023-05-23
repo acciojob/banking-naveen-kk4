@@ -18,8 +18,6 @@ public class CurrentAccount extends BankAccount{
         super(name,balance,minimumBalance);
         if(balance<this.minimumBalance)throw new Exception("insufficient balance");
         this.tradeLicenseId=tradeLicenseId;
-
-
     }
     public boolean isValid(String s){
         for(int i = 1;i<s.length();i++){
