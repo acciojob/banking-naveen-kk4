@@ -1,7 +1,13 @@
 package com.driver;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Optional;
 import java.util.PriorityQueue;
+@Getter
+@Setter
+
 
 public class CurrentAccount extends BankAccount{
     private String tradeLicenseId;
