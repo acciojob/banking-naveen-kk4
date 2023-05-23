@@ -1,11 +1,7 @@
 package com.driver;
 
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.Collections;
-@Getter
-@Setter
 
 public class BankAccount {
 
@@ -18,6 +14,10 @@ public class BankAccount {
         this.balance = balance;
         this.minBalance = minBalance;
 
+    }
+
+    public double getBalance() {
+        return balance;
     }
 
     public String generateAccountNumber(int digits, int sum) throws Exception{

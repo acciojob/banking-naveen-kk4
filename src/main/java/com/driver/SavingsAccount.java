@@ -1,10 +1,5 @@
 package com.driver;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 
 
 public class SavingsAccount extends BankAccount{
@@ -20,8 +15,7 @@ public class SavingsAccount extends BankAccount{
     }
     public void withdraw(double amount) throws Exception {
         if(amount>maxWithdrawalLimit)throw new Exception("Maximum Withdraw Limit Exceed");
-        if(super.getBalance()-amount < minimumBalance) throw new Exception("Insufficient Balance");
-        super.setBalance(super.getBalance()-amount);
+       super.withdraw(amount);
 
 
     }
